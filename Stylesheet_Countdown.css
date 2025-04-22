@@ -1,13 +1,18 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     margin: 0;
 }
 
 h1 {
+    font-size: 24pt;
     margin: 20px 0 0 20px;
 }
 
 p {
-    font-size: 24px;
+    font-size: 12pt;
     margin: 20px 0 0 20px;
 }
 

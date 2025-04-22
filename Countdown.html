@@ -11,17 +11,26 @@
 
 <body>
     <h1>
-        Countdowns
+        Countdown
     </h1>
 
-    <button onclick="ToggleElement('TextTheorie'), ToggleElement('countdownTheorie'), ToggleElement('Fortschritt')">Ende
-        der Theorie</button>
-
-    <p id="TextTheorie" style="display: none;">
-        In diesem Countdown wird gezeigt, wie viel Zeit noch bis zum Ende der Theoriephase vergeht.
+    <p>
+        Hallo, auf dieser Website kannst du schauen, wie viel Zeit noch bis zum Ende unserer Theoriephase vergeht
+        (04.07. 23:59:59 Uhr).
     </p>
+
+    <p style="font-style: italic; font-size: 10pt;">
+        (Aktuell sind noch alle Wochenenden und Feiertage mit eingerechnet. Es ist geplant einen Timer ohne die
+        Wochenenden zu erstellen.)
+    </p>
+
+    <!--
+    <button onclick="ToggleElement('countdownTheorie'), ToggleElement('Fortschritt')">Ende
+        der Theorie</button>
+    -->
+
     <!-- Display the countdown timer in an element -->
-    <p id="countdownTheorie" style="display: none;"></p>
+    <p id="countdownTheorie" style="display: block;"></p>
     <div class="progress-bar-container" id="Fortschritt" style="display: none;">
         <div class="progress-bar" id="progress-bar"></div>
     </div>

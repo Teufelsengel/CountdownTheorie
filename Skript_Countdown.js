@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var DateEndeTheoriephase = new Date("Jul 4, 2025 00:00:00").getTime();
+var DateEndeTheoriephase = new Date("Jul 4, 2025 23:59:59").getTime();
 
 
 //Countdown Ende Theoriephase
