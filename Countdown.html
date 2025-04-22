@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Stylesheet_Countdown.css" type="text/css">
+    <script src="Skript_Countdown.js"></script>
+    <title>Countdowns</title>
+</head>
+
+<body>
+    <h1>
+        Countdowns
+    </h1>
+
+    <button onclick="ToggleElement('TextTheorie'), ToggleElement('countdownTheorie'), ToggleElement('Fortschritt')">Ende
+        der Theorie</button>
+
+    <p id="TextTheorie" style="display: none;">
+        In diesem Countdown wird gezeigt, wie viel Zeit noch bis zum Ende der Theoriephase vergeht.
+    </p>
+    <!-- Display the countdown timer in an element -->
+    <p id="countdownTheorie" style="display: none;"></p>
+    <div class="progress-bar-container" id="Fortschritt" style="display: none;">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+</body>
+
+</html>
