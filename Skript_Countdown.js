@@ -1,5 +1,8 @@
 // Set the date we're counting down to
-var DateEndeTheoriephase = new Date("Jul 4, 2025 23:59:59").getTime();
+var ende = new Date("Jul 4, 2025 23:59:59").getTime();
+
+// Get today's date and time
+var now = new Date().getTime();
 
 //Countdown Ende Theoriephase
 // Update the count down every 1 second 
@@ -9,7 +12,7 @@ var x = setInterval(function () {
     var now = new Date().getTime();
 
     // Find the distanceEndeStudium between now and the count down date
-    var distanceEndePhase = DateEndeTheoriephase - now;
+    var distanceEndePhase = ende - now;
 
     // Time calculations for days, hours, minutes and seconds
     var days = Math.floor(distanceEndePhase
@@ -45,3 +48,14 @@ function ToggleElement(elementName) {
 
 }
 
+//Fortschrittsbalken
+var start = new Date("Apr 14, 2025 00:00:00").getTime();
+var geschafft = now - start;
+var dauer = ende - start;
+var prozentZeit = (90 * geschafft) / dauer;
+var gerundet = Math.round(prozentZeit);
+
+window.onload = () => {
+    document.getElementById("fortschritt").setAttribute("width", prozentZeit + "vw");
+    document.getElementById("prozentanzeige").innerHTML = "Wir haben schon ~" + gerundet + "% geschafft.";
+};
