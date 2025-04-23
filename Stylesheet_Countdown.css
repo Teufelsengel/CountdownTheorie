@@ -68,7 +68,7 @@ svg {
 @media screen and (max-width: 600px) {
     button {
         width: 25vw;
-        height: 7vh;
+        height: 5vh;
         min-width: fit-content;
         margin-left: 20px;
         margin-top: 20px;
