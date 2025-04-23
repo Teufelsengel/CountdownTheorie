@@ -19,6 +19,7 @@ p {
 button {
     width: 15vw;
     height: 8vh;
+    min-width: fit-content;
     margin-left: 20px;
     margin-top: 20px;
     font-size: 12pt;
@@ -62,4 +63,21 @@ svg {
 #fortschritt {
     height: 5vh;
     fill: green;
+}
+
+@media screen and (max-width: 600px) {
+    button {
+        width: 25vw;
+        height: 7vh;
+        min-width: fit-content;
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 12pt;
+        font-weight: bold;
+        color: white;
+        background-color: grey;
+        border: 3px;
+        border-style: solid;
+        border-color: black;
+    }
 }
