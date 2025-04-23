@@ -15,21 +15,31 @@
     </h1>
 
     <p>
-        Hallo, auf dieser Website kannst du schauen, wie viel Zeit noch bis zum Ende unserer Theoriephase vergeht
-        (04.07. 23:59:59 Uhr).
+        Hallo, auf dieser Website kannst du schauen, wie viel Zeit noch bis zum Ende unserer letzten Vorlesung vergeht.
+        (01.07. 12:30:00 Uhr).
     </p>
 
     <p style="font-style: italic; font-size: 10pt;">
-        (Wochenenden und Feiertage sind mit eingerechnet.)
+        (Feiertage sind mit eingerechnet.)
     </p>
 
-    <p id="countdownTheorie"></p>
+    <p id="countdown" style="display: block;"> Lade...</p>
+    <p id="wochentage" style="display: none;"> Lade...</p>
 
     <svg>
         <rect id="fortschrittsbar" x="0" y="0" rx="25" ry="25"></rect>
         <rect id="fortschritt" x="0" y="0" rx="25" ry="25"></rect>
     </svg>
     <p id="prozentanzeige"></p>
+
+    <button id="btnOhne"
+        onclick="ToggleElement('countdown'); ToggleElement('wochentage'); ToggleElement('btnOhne'); ToggleElement('btnMit')"
+        style="display: block;"> Ohne Wochenenden </button>
+
+    <button id="btnMit"
+        onclick="ToggleElement('countdown'); ToggleElement('wochentage'); ToggleElement('btnOhne'); ToggleElement('btnMit')"
+        style="display: none;"> Mit Wochenenden </button>
+
 </body>
 
 </html>

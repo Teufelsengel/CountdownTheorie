@@ -1,8 +1,34 @@
 // Set the date we're counting down to
-var ende = new Date("Jul 4, 2025 23:59:59").getTime();
+var ende = new Date("Jul 1, 2025 12:30:00").getTime();
 
 // Get today's date and time
 var now = new Date().getTime();
+
+
+//Anzahl der Wochentage berechnen
+function getWorkingDays() {
+    var Datum = new Date();
+    let weekday = 0;
+    let distance = ende - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let count = 0;
+    var heute = Datum.getDay();
+
+    while (count <= days) {
+        if (heute !== 0 && heute !== 6) {
+            weekday++;
+        }
+        if (heute == 6) {
+            heute = 0;
+        } else {
+            heute++;
+        }
+
+        count++;
+    }
+
+    return weekday;
+}
 
 //Countdown Ende Theoriephase
 // Update the count down every 1 second 
@@ -25,14 +51,18 @@ var x = setInterval(function () {
         % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="countdown"
-    document.getElementById("countdownTheorie").innerHTML = days + "d " + hours + "h "
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+
+    // Display the result in the element with id="wochentage"
+    document.getElementById("wochentage").innerHTML = getWorkingDays() + "d " + hours + "h "
         + minutes + "m " + seconds + "s ";
 
     // If the count down is finished, write some text
     if (distanceEndePhase
         < 0) {
         clearInterval(x);
-        document.getElementById("countdownTheorie").innerHTML = "EXPIRED";
+        document.getElementById("countdown").innerHTML = "EXPIRED";
     }
 }, 1000);
 
@@ -47,6 +77,8 @@ function ToggleElement(elementName) {
     }
 
 }
+
+
 
 //Fortschrittsbalken
 var start = new Date("Apr 14, 2025 00:00:00").getTime();

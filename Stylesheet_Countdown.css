@@ -16,7 +16,29 @@ p {
     margin: 20px 0 0 20px;
 }
 
-#countdownTheorie {
+button {
+    width: 15vw;
+    height: 8vh;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
+    color: white;
+    background-color: grey;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+}
+
+#countdown {
+    background-color: grey;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+#wochentage {
     background-color: grey;
     color: white;
     font-size: 50px;
