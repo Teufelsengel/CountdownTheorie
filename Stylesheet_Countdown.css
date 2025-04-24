@@ -26,9 +26,7 @@ button {
     font-weight: bold;
     color: white;
     background-color: grey;
-    border: 3px;
-    border-style: solid;
-    border-color: black;
+    border: 0px;
 }
 
 #countdown {
