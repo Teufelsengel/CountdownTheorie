@@ -45,6 +45,14 @@ button {
     margin: 20px 0 20px 0;
 }
 
+#vorlesungscounter {
+    background-color: grey;
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
 svg {
     margin-left: 20px;
     margin-right: 20px;
