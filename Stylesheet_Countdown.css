@@ -122,6 +122,8 @@ svg {
 
 #gewinnanzeige {
     display: none;
+    font-size: 20pt;
+    font-weight: bold;
 }
 
 #nochmal {

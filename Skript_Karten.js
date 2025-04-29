@@ -45,6 +45,7 @@ export function karte_aufdecken() {
         document.getElementById("aufhören").disabled = true;
         document.getElementById("gewinnanzeige").style.display = "block";
         document.getElementById("gewinnanzeige").innerHTML = "Du hast verloren!";
+        document.getElementById("gewinnanzeige").style.color = '#E00034';
         document.getElementById("nochmal").style.display = "block";
 
     }
@@ -70,8 +71,10 @@ export function computer_karten() {
         document.getElementById("computersumme").innerHTML = "Dein Gegner hat " + summe_computer + " Punkte erzielt.";
         if (summe_spieler > summe_computer || summe_computer > 21) {
             document.getElementById("gewinnanzeige").innerHTML = "Du hast gewonnen!";
+            document.getElementById("gewinnanzeige").style.color = '#00C41A';
         } else {
             document.getElementById("gewinnanzeige").innerHTML = "Du hast verloren!";
+            document.getElementById("gewinnanzeige").style.color = '#E00034';
         }
 
     }
