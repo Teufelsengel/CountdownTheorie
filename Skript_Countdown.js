@@ -66,18 +66,6 @@ var x = setInterval(function () {
     }
 }, 1000);
 
-//Toggle Element
-function ToggleElement(elementName) {
-    const toggleElement = document.getElementById(elementName);
-    if (toggleElement.style.display == "none") {
-        toggleElement.style.display = "block";
-    }
-    else {
-        toggleElement.style.display = "none";
-    }
-
-}
-
 //Fortschrittsbalken
 var start = new Date("Apr 14, 2025 00:00:00").getTime();
 var geschafft = now - start;
@@ -152,3 +140,5 @@ var vorlesungen = terminliste.filter(dateStr => {
     const date = new Date(dateStr);
     return date > now;
 }).length;
+
+

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=0.1">
     <link rel="stylesheet" href="Stylesheet_Countdown.css" type="text/css">
-    <script src="Skript_Countdown.js"></script>
     <title>Countdown</title>
 </head>
 
@@ -23,8 +22,8 @@
         (Feiertage sind mit eingerechnet.)
     </p>
 
-    <p id="countdown" style="display: block;"> Lade...</p>
-    <p id="wochentage" style="display: none;"> Lade...</p>
+    <p id="countdown"> Lade...</p>
+    <p id="wochentage"> Lade...</p>
     <p id="vorlesungscounter">Lade...</p>
 
     <svg>
@@ -33,15 +32,36 @@
     </svg>
     <p id="prozentanzeige"></p>
 
-    <button id="btnOhne"
-        onclick="ToggleElement('countdown'); ToggleElement('wochentage'); ToggleElement('btnOhne'); ToggleElement('btnMit')"
-        style="display: block;"> Ohne Wochenenden </button>
+    <button id="btnOhne"> Ohne Wochenenden </button>
 
-    <button id="btnMit"
-        onclick="ToggleElement('countdown'); ToggleElement('wochentage'); ToggleElement('btnOhne'); ToggleElement('btnMit')"
-        style="display: none;"> Mit Wochenenden </button>
+    <button id="btnMit"> Mit Wochenenden </button>
 
+    <div>
+        Wenn dir das noch zu lange dauert, dann spiel doch eine Runde Black Jack. An der visualisierung wird noch
+        gearbeitet.
+    </div>
 
+    <button id="btnBlackJack">Black Jack (Beta)</button>
+
+    <div id="spielfeld">
+        <div id="blackjack">
+            <div id="meineZahl">
+                aufgedeckte Zahl
+            </div>
+            <div id="summe_spieler">
+                aktuelle Summe
+            </div>
+            <button id="aufdecken">Karte aufdecken</button>
+            <div id="warnung">Der Kartenstapel ist leer.</div>
+            <button id="aufhören">aufhören</button>
+            <div id="computersumme">Computersumme</div>
+            <div id="gewinnanzeige">Gewinnanzeige</div>
+            <button id="nochmal">Nochmal</button>
+        </div>
+    </div>
+    <script type="module" src="./Skript_Countdown.js"></script>
+    <script type="module" src="./Skript_Karten.js"></script>
+    <script type="module" src="./Buttons.js"></script>
 </body>
 
 </html>
